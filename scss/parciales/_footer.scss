@@ -1,0 +1,45 @@
+@import "./variables";
+@import "../extends.scss";
+
+
+footer{
+    .footer {
+        @extend%barras;
+            
+            #datos{
+                font-family: $font-estudio;
+                font-size: 16px;
+                margin-top: 30px;
+                    ul{
+                        li{
+                            color: whitesmoke;
+                            font-weight: bold;  
+                        }
+                    }
+            }  
+
+    }
+    .copy{
+        background-image: $degrade;
+        padding: 5px 0px;
+    }
+    
+}
+
+ @media (max-width: 575.98px) {
+
+     footer{
+         .footer{
+             .logo{
+                 padding-left:20px;
+             }
+            .resp-footer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+    
+}

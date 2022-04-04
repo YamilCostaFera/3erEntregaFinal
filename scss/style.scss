@@ -1,0 +1,109 @@
+@import "./extends.scss";
+@import "./parciales/variables";
+@import "./parciales/header";
+@import "./parciales/footer";
+@import "./base/mixin";
+// PARCIALES SECCIONES
+@import "./parciales/contacto";
+@import "./parciales/especialidades";
+@import "./parciales/faQs";
+@import "./parciales/nosotros";
+
+::selection{
+    @extend%selection;  
+}    
+
+li{
+    list-style: none;
+}
+
+// NAVBAR
+.barra{
+    background-image: $degrade;
+    border-top: white solid 1px;
+        .brand{
+            color:burlywood;
+        }
+        .brand:hover{
+            color:white;
+        }
+        #colorNav{
+            color: white;
+        }
+        #colorNav:hover{
+            color: black;
+            font-weight: bold;
+            border: 1px solid white;
+            border-radius: 30px;
+            transition-delay: 0.5s;
+        }    
+}
+
+// MAIN
+main{
+    
+    .main{
+        .somos{
+            text-align: center;
+            font-family: arial;
+            color: #280233;
+            padding: 3px 0px;
+            margin-top: 20px;
+        }
+        .p-pres{
+            @include text;
+        }
+    }
+    
+}
+
+// ASIDE
+aside{
+    .div-noticias{
+        padding: 20px 5px;
+            .titulos{
+                @extend%titulos;
+            }
+    }
+    #tarjetas{
+        margin-left: 55px;
+            .card{
+                #btn__{
+                    background-color: $color1;
+                    border: black solid 1px;                        
+                }
+                #btn__:hover{
+                    background-image: $degrade;
+                    color: $color1;        
+                }   
+            }
+    }
+}
+
+// SECTION
+section{
+    #div-fotos{
+        padding-top: 30px;
+            .titulos{
+                @extend%titulos;
+            }
+    }
+    #fotos{
+        padding: 20px 0px;
+        #color-btn{
+            background-color: gold;
+            }
+        #color-btn-A{
+            background-color: white;
+        }    
+    }
+}
+@media (max-width: 575.98px){
+   aside{
+       #tarjetas{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       }
+   }
+}
